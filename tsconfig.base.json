@@ -1,21 +1,44 @@
 {
-  "compileOnSave": false,
-  "compilerOptions": {
-    "rootDir": ".",
-    "sourceMap": true,
-    "declaration": false,
-    "moduleResolution": "node",
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "importHelpers": true,
-    "target": "es2015",
-    "module": "esnext",
-    "typeRoots": ["node_modules/@types"],
-    "lib": ["es2017", "dom"],
-    "skipLibCheck": true,
-    "skipDefaultLibCheck": true,
-    "baseUrl": ".",
-    "paths": {}
-  },
-  "exclude": ["node_modules", "tmp"]
+    "compileOnSave": false,
+    "compilerOptions": {
+        "rootDir": ".",
+        "sourceMap": true,
+        "declaration": false,
+        "moduleResolution": "node",
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "importHelpers": true,
+        "target": "es2015",
+        "module": "esnext",
+        "typeRoots": ["node_modules/@types"],
+        "lib": ["es2017", "dom"],
+        "skipLibCheck": true,
+        "skipDefaultLibCheck": true,
+        "baseUrl": ".",
+        "paths": {
+            "@nx-react-burger-app/burger-builder/feature-burger-builder": [
+                "libs/burger-builder/feature-burger-builder/src/index.ts"
+            ],
+            "@nx-react-burger-app/burger-builder/data-access": [
+                "libs/burger-builder/data-access/src/index.ts"
+            ],
+            "@nx-react-burger-app/shared/interfaces": [
+                "libs/shared/interfaces/src/index.ts"
+            ],
+            "@nx-react-burger-app/shared/ui": ["libs/shared/ui/src/index.ts"],
+            "@nx-react-burger-app/order/data-access": [
+                "libs/order/data-access/src/index.ts"
+            ],
+            "@nx-react-burger-app/order/feature-order": [
+                "libs/order/feature-order/src/index.ts"
+            ],
+            "@nx-react-burger-app/auth/data-access": [
+                "libs/auth/data-access/src/index.ts"
+            ],
+            "@nx-react-burger-app/auth/feature-auth": [
+                "libs/auth/feature-auth/src/index.ts"
+            ]
+        }
+    },
+    "exclude": ["node_modules", "tmp"]
 }

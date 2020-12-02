@@ -1,34 +1,58 @@
 {
-  "npmScope": "nx-react-burger-app",
-  "affected": {
-    "defaultBase": "master"
-  },
-  "implicitDependencies": {
-    "workspace.json": "*",
-    "package.json": {
-      "dependencies": "*",
-      "devDependencies": "*"
+    "npmScope": "nx-react-burger-app",
+    "affected": {
+        "defaultBase": "master"
     },
-    "tsconfig.base.json": "*",
-    "tslint.json": "*",
-    ".eslintrc.json": "*",
-    "nx.json": "*"
-  },
-  "tasksRunnerOptions": {
-    "default": {
-      "runner": "@nrwl/workspace/tasks-runners/default",
-      "options": {
-        "cacheableOperations": ["build", "lint", "test", "e2e"]
-      }
-    }
-  },
-  "projects": {
-    "burger-app": {
-      "tags": []
+    "implicitDependencies": {
+        "workspace.json": "*",
+        "package.json": {
+            "dependencies": "*",
+            "devDependencies": "*"
+        },
+        "tsconfig.base.json": "*",
+        "tslint.json": "*",
+        ".eslintrc.json": "*",
+        "nx.json": "*"
     },
-    "burger-app-e2e": {
-      "tags": [],
-      "implicitDependencies": ["burger-app"]
+    "tasksRunnerOptions": {
+        "default": {
+            "runner": "@nrwl/workspace/tasks-runners/default",
+            "options": {
+                "cacheableOperations": ["build", "lint", "test", "e2e"]
+            }
+        }
+    },
+    "projects": {
+        "burger-app": {
+            "tags": []
+        },
+        "burger-app-e2e": {
+            "tags": [],
+            "implicitDependencies": ["burger-app"]
+        },
+        "burger-builder-feature-burger-builder": {
+            "tags": []
+        },
+        "burger-builder-data-access": {
+            "tags": []
+        },
+        "shared-interfaces": {
+            "tags": []
+        },
+        "shared-ui": {
+            "tags": []
+        },
+        "order-data-access": {
+            "tags": []
+        },
+        "order-feature-order": {
+            "tags": []
+        },
+        "auth-data-access": {
+            "tags": []
+        },
+        "auth-feature-auth": {
+            "tags": []
+        }
     }
-  }
 }
