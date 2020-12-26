@@ -2,6 +2,7 @@ import {
     LoadOrders,
     LoadOrdersFailure,
     LoadOrdersSuccess,
+    Order,
     OrderActions,
     PurchaseBurger,
     PurchaseBurgerFailure,
@@ -40,7 +41,7 @@ export const loadOrders = (token: string, userId: string): LoadOrders => {
     };
 };
 
-export const loadOrdersSuccess = (orders: []): LoadOrdersSuccess => {
+export const loadOrdersSuccess = (orders: Order[]): LoadOrdersSuccess => {
     return {
         type: OrderActions.LOAD_ORDERS_SUCCESS,
         orders,

@@ -58,7 +58,7 @@ const removeIngredient = (
     return {
         ...draft,
         ingredients: updateIngredient,
-        totalPrice: draft.totalPrice + INGREDIENT_PRICES[ingredientName],
+        totalPrice: draft.totalPrice - INGREDIENT_PRICES[ingredientName],
         building: true,
     };
 };

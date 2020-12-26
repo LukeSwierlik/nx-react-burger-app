@@ -1,4 +1,12 @@
+import { faMinus, faPlus } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { FunctionComponent, PropsWithChildren } from 'react';
+import {
+    BuildControlBtnLess,
+    BuildControlBtnMore,
+    BuildControlLabel,
+    BuildControlContainer,
+} from './build-control.style';
 
 interface BuildControlProps {
     label: string;
@@ -13,11 +21,16 @@ export const BuildControl: FunctionComponent<BuildControlProps> = (
     const { label, removed, disabled, added } = props;
 
     return (
-        <div>
-            <div>{label}</div>
+        <BuildControlContainer>
+            <BuildControlLabel>{label}</BuildControlLabel>
 
-            <button onClick={removed}>Less</button>
-            <button onClick={added}>More</button>
-        </div>
+            <BuildControlBtnLess onClick={removed}>
+                <FontAwesomeIcon icon={faMinus} />
+            </BuildControlBtnLess>
+
+            <BuildControlBtnMore onClick={added}>
+                <FontAwesomeIcon icon={faPlus} />
+            </BuildControlBtnMore>
+        </BuildControlContainer>
     );
 };

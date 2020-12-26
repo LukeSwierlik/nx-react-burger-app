@@ -1,5 +1,7 @@
+import { Ingredient } from './burger-builder.interfaces';
+
 export interface OrderState {
-    orders: [];
+    orders: Order[];
     loaded: boolean;
     purchased: boolean;
 }
@@ -20,7 +22,7 @@ export interface PurchaseBurger {
 export interface PurchaseBurgerSuccess {
     type: typeof OrderActions.PURCHASE_BURGER_SUCCESS;
     orderId: number;
-    orders: any[];
+    orders: Order[];
 }
 
 export interface PurchaseBurgerFailure {
@@ -36,10 +38,26 @@ export interface LoadOrders {
 
 export interface LoadOrdersSuccess {
     type: typeof OrderActions.LOAD_ORDERS_SUCCESS;
-    orders: any[];
+    orders: Order[];
 }
 
 export interface LoadOrdersFailure {
     type: typeof OrderActions.LOAD_ORDERS_FAILURE;
     error: Error;
+}
+
+export interface Client {
+    country: string;
+    deliveryMethod: 'cheapest' | 'fastest';
+    email: string;
+    name: string;
+    street: string;
+    zipCode: string;
+}
+
+export interface Order {
+    ingredients: Ingredient[];
+    client: Client;
+    price: number;
+    userId: string;
 }
